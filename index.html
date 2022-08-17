@@ -10,20 +10,22 @@
 </head>
 <body>
     <h1>What are we drinking?</h1>
-    <p>What is your favorite liquor?</p>
-    <form id="liquor-selector">
-        <label for="liquor">Pick your poison:</label>
-        <select name="liquor">
-            <option value ="Tequila">Tequila</option>
-            <option value ="Vodka">Vodka</option>
-            <option value ="Gin">Gin</option>
-            <option value ="Whisky">Whisky</option>
-            <option value ="Red Wine">Red wine</option>
-            <option value ="Bourbon">Bourbon</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div id="drink select">
+        <p>What is your favorite liquor?</p>
+        <form id="liquor-selector">
+            <label for="liquor">Pick your poison:</label>
+            <select name="liquor" id="liquor">
+                <option value ="Tequila">Tequila</option>
+                <option value ="Vodka">Vodka</option>
+                <option value ="Gin">Gin</option>
+                <option value ="Red_Wine">Red wine</option>
+                <option value ="Bourbon">Bourbon</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div id="drinkDisplay"></div>
 </body>
 </html>
 
