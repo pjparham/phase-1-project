@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'LemonMilkItalic';
+    src: url(fonts/LEMONMILK-RegularItalic.otf);
+}
+@font-face {
+    font-family: 'LemonMilkItalicBold';
+    src: url(fonts/LEMONMILK-BoldItalic.otf);
+}
+@font-face {
+    font-family: 'ButlerLight';
+    src: url(fonts/Butler_Light.otf) format(opentype);
+}
+@font-face {
+    font-family: 'ButlerRegular';
+    src: url(fonts/Butler_Regular.otf) format(opentype);
+}
+
+:root {
+    --dark:#252526;
+    --darkgreen: #5A5F49;
+    --light: #E0D6CC;
+
+}
+
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    /* font-family: Arial, sans-serif; */
+}
+
+h1 {
+    text-align: center;
+    font-family: 'LemonMilkItalicBold';
+    font-size: 500%;
+}
+
+p {
+    font-family: 'ButlerLight';
+    font-size: 200%;
+}
