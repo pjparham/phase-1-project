@@ -22,20 +22,28 @@
 
 }
 
-
 body {
     background-color: var(--light);
     color: var(--dark);
-    /* font-family: Arial, sans-serif; */
+    font-family: 'ButlerLight';
 }
 
 h1 {
+    background-color: var(--dark);
+    color: var(--light);
     text-align: center;
     font-family: 'LemonMilkItalicBold';
     font-size: 500%;
+    width: 100%;
 }
 
 p {
     font-family: 'ButlerLight';
     font-size: 200%;
+    padding: 10px;
+}
+
+#liquor-selector{
+    font-size: 125%;
+    padding: 10px;
 }
