@@ -18,7 +18,8 @@
 :root {
     --dark:#252526;
     --darkgreen: #5A5F49;
-    --light: #E0D6CC;
+    /* --light: #E0D6CC; */
+    --light: #f1e7d1;
 
 }
 
@@ -58,6 +59,7 @@ h1 {
 }
 
 #drink-select{
+    margin-left: 10px;
     grid-area: selector;
     border: 3px solid var(--dark);
     margin-top: 20px;

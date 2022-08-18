@@ -76,7 +76,7 @@ function handleDrinkData(drinkData){
         div.setAttribute('class', 'card')
         drinkDisplay.appendChild(div)
         div.append(img, name)
-        img.addEventListener('click', () => getRecipe(div.id))
+        div.addEventListener('click', () => getRecipe(div.id))
     }
 }
 
