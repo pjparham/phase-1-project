@@ -10,12 +10,14 @@ function displayDrinks(){
     .then((drinkData) => console.log(drinkData))
 }
 
+let header = document.getElementById('header')
+console.log(header)
 let drinkForm = document.getElementById('drink-select')
 let liquorForm = document.getElementById('liquor-selector')
 let liquorSelect = document.getElementById('liquor')
 let drinkDisplay = document.getElementById('drinkDisplay')
 let recipeDisplay = document.getElementById('recipeDisplay')
-// console.log(liquorSelect)
+let h3 = document.createElement('h3')
 
 function enableLiquorForm(){
     liquorForm.addEventListener('submit', (e) => {
@@ -28,6 +30,8 @@ function enableLiquorForm(){
         }
         let liquorValue = liquorSelect.options[liquorSelect.selectedIndex].value
         displayLiquorImage(liquorValue)
+        h3.innerText = 'Click a drink icon and your recipe will be displayed below'
+        header.appendChild(h3)
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${liquorValue}`)
         .then((response) => response.json())
         .then((drinkData) => handleDrinkData(drinkData))
