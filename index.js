@@ -49,15 +49,15 @@ function displayLiquorImage(liquorValue){
             drinkForm.appendChild(img)
             break;
         case 'Gin':
-            img.src = ''
+            img.src = 'images/gin.png'
             drinkForm.appendChild(img)
             break;
         case 'Red_Wine':
-            img.src = ""
+            img.src = "images/wine.png"
             drinkForm.appendChild(img)
             break;
         case 'Bourbon':
-            img.src = ""
+            img.src = "images/bourbon.png"
             drinkForm.appendChild(img)
             break;
     }
@@ -88,6 +88,7 @@ function getRecipe(divId){
 
 function displayRecipe(drinkData){
     let drink = drinkData.drinks[0]
+    let name = drink.strDrink
     let instructions = drink.strInstructions
     let ingredientsArray = []
     // for (let i = 0; i < 15; i++){
@@ -126,6 +127,8 @@ function displayRecipe(drinkData){
     while (recipeDisplay.lastElementChild){
         recipeDisplay.removeChild(recipeDisplay.firstChild)
     }
+    let drinkName = document.createElement('h2')
+    drinkName.innerText = name
     let recipe = document.createElement('p')
     recipe.innerText = instructions
     let ul = document.createElement('ul')
@@ -134,6 +137,7 @@ function displayRecipe(drinkData){
         li.innerText = ingredientsArray[x]
         ul.appendChild(li)
     }
+    recipeDisplay.appendChild(drinkName)
     recipeDisplay.appendChild(ul)
     recipeDisplay.appendChild(recipe)
 

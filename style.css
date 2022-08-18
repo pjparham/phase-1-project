@@ -98,6 +98,12 @@ h1 {
     margin: 10px;
 }
 
+#recipeDisplay h2{
+    font-family: 'LemonMilkItalicBold';
+    float: right;
+    margin-right: 10px;
+}
+
 #recipeDisplay li{
     font-family: 'LemonMilkItalic';
     font-size: 145%;
@@ -112,7 +118,7 @@ h1 {
 
 #liquor-selector{
     font-size: 125%;
-    padding: 10px;
+    padding: 20px;
 }
 
 img{
