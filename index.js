@@ -10,6 +10,7 @@ function displayDrinks(){
     .then((drinkData) => console.log(drinkData))
 }
 
+let drinkForm = document.getElementById('drink-select')
 let liquorForm = document.getElementById('liquor-selector')
 let liquorSelect = document.getElementById('liquor')
 let drinkDisplay = document.getElementById('drinkDisplay')
@@ -34,7 +35,32 @@ function enableLiquorForm(){
 }
 
 function displayLiquorImage(liquorValue){
-    console.log(liquorValue)
+    let drinkFormImg = drinkForm.querySelector('img')
+    drinkFormImg.remove()
+    let img = document.createElement('img')
+    switch(liquorValue){
+        case 'Tequila':
+            img.src = "images/patron.png"
+            drinkForm.appendChild(img)
+            break;
+        case 'Vodka':
+            img.setAttribute('class', 'smaller')
+            img.src = 'images/grey_goose.png'
+            drinkForm.appendChild(img)
+            break;
+        case 'Gin':
+            img.src = ''
+            drinkForm.appendChild(img)
+            break;
+        case 'Red_Wine':
+            img.src = ""
+            drinkForm.appendChild(img)
+            break;
+        case 'Bourbon':
+            img.src = ""
+            drinkForm.appendChild(img)
+            break;
+    }
 }
 
 function handleDrinkData(drinkData){
@@ -112,9 +138,9 @@ function displayRecipe(drinkData){
     recipeDisplay.appendChild(recipe)
 
 
-    console.log(drink)
-    console.log(instructions)
-    console.log(ingredientsArray)
+    // console.log(drink)
+    // console.log(instructions)
+    // console.log(ingredientsArray)
 }
 // function fetchDrinkDetails(drinkID){
 //     fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkID}`)
