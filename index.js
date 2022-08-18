@@ -26,10 +26,15 @@ function enableLiquorForm(){
             recipeDisplay.removeChild(recipeDisplay.firstChild)
         }
         let liquorValue = liquorSelect.options[liquorSelect.selectedIndex].value
+        displayLiquorImage(liquorValue)
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${liquorValue}`)
         .then((response) => response.json())
         .then((drinkData) => handleDrinkData(drinkData))
     })
+}
+
+function displayLiquorImage(liquorValue){
+    console.log(liquorValue)
 }
 
 function handleDrinkData(drinkData){
@@ -103,8 +108,9 @@ function displayRecipe(drinkData){
         li.innerText = ingredientsArray[x]
         ul.appendChild(li)
     }
-    recipeDisplay.appendChild(recipe)
     recipeDisplay.appendChild(ul)
+    recipeDisplay.appendChild(recipe)
+
 
     console.log(drink)
     console.log(instructions)

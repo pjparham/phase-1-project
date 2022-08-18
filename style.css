@@ -22,6 +22,17 @@
 
 }
 
+#site{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 4fr auto;
+    grid-template-areas:
+        "title title"
+        "selector drink-content"
+        "recipe recipe"
+}
+
+
 body {
     background-color: var(--light);
     color: var(--dark);
@@ -36,14 +47,61 @@ h1 {
     font-size: 500%;
     width: 100%;
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
+    grid-area: title;
 }
 
-p {
+#drink-select p {
     font-family: 'ButlerLight';
     font-size: 200%;
     padding: 10px;
 }
+
+#drink-select{
+    grid-area: selector;
+    border: 3px solid var(--dark);
+    margin-top: 20px;
+}
+#drink-select img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+/* #liquor-selector label{
+    font-family: 'LemonMilkItalic';
+
+} */
+
+#drinkDisplay{
+    /* grid-area: drink-content; */
+    margin: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+}
+
+#recipeDisplay{
+    grid-area: recipe;
+    background-color: var(--dark);
+    color: var(--light);
+    margin: 10px;
+}
+
+#recipeDisplay li{
+    font-family: 'LemonMilkItalic';
+    font-size: 145%;
+}
+
+#recipeDisplay p{
+    font-family: 'ButlerLight';
+    font-size: 175%;
+    margin-left: 10px;
+}
+
 
 #liquor-selector{
     font-size: 125%;
@@ -54,22 +112,35 @@ img{
     width: 20%;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background: #353535; */
-    font-size: 1rem;
-    color: var(--dark);
-    /* box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem; */
-    height: 100%;
-    width: 100%;
-    border-radius: 4px;
-    transition: all 500ms;
-    overflow: hidden;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
- }
+
+input[type=submit] {
+    margin-top: 10px;
+    padding:5px 15px; 
+    background: var(--light); 
+    border-color: var(--darkgreen);
+    border: 1;
+    font-size: 100%;
+    font-family: 'LemonMilkItalic'
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+.card{
+    margin: auto;
+    size: 100%;
+}
+
+.card img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500%;
+    height: auto;
+}
+
+.card h3{
+    text-align: center;
+    font-family: 'LemonMilkItalic';
+}
