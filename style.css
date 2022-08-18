@@ -123,8 +123,9 @@ h1 {
     padding: 20px;
 }
 
-img{
+#drinkDisplay img{
     width: 20%;
+    border-radius: 8px;
 }
 
 
