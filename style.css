@@ -40,7 +40,25 @@ body {
     font-family: 'ButlerLight';
 }
 
-h1 {
+#header{
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    font-family: 'LemonMilkItalicBold';
+    width: 100%;
+    margin: 0px;
+    /* padding: 10px; */
+    grid-area: title;
+}
+
+#header h1{
+    font-size: 500%;
+}
+
+#header h3{
+    font-size: 150%;
+}
+/* h1 {
     background-color: var(--dark);
     color: var(--light);
     text-align: center;
@@ -50,7 +68,7 @@ h1 {
     margin: 0px;
     padding: 10px;
     grid-area: title;
-}
+} */
 
 #drink-select p {
     font-family: 'ButlerLight';
