@@ -1,3 +1,17 @@
+# What are we drinking
+
+What are we drinking is a drink recipe library. It allows you to pick your favorite alcoholic mixer and provides multiple drinks to pick from for each mixer. Once you choose a drink, the recipe is displayed at the bottom of the screen.
+
+## Access
+
+What are we drinking can be accessed at the URL https://pjparham.github.io/phase-1-project/
+
+## Usage
+
+Select an alcoholic mixer from the dropdown and select submit. Then click on any of the drink cards to display your recipe.
+
+## Considerations
+
 Considerations to MARSNEV for LEMON MILK font downloaded from dafont.com
 Consdierations to Fabian De Smet for Butler font downloaded from dafont.com
 
