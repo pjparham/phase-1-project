@@ -10,6 +10,8 @@ What are we drinking can be accessed at the URL https://pjparham.github.io/phase
 
 Select an alcoholic mixer from the dropdown and select submit. Then click on any of the drink cards to display your recipe.
 
+![Demo of what are we drinking](images/project-1-gif.gif)
+
 ## Considerations
 
 Considerations to MARSNEV for LEMON MILK font downloaded from dafont.com <br />
@@ -21,3 +23,5 @@ vodka - https://www.greygoose.com/binaries/content/gallery/greygoose/products/gr
 gin - https://jensensliquors.com/media/catalog/product/cache/52aedc550d156c29ba0b1633f374772d/b/o/bombay-sapphire-175-new-web_1.png <br />
 wine - https://www.seekpng.com/ipng/u2a9o0o0o0q8t4a9_wine-glass-transpa-png-pictures-free-icons-and/ <br />
 bourbon - https://www.kindpng.com/picc/m/262-2621961_bulleit-bourbon-png-transparent-png.png <br />
+<br/> <br />
+Considerations to https://ezgif.com/ to turn demo of my app into a GIF
