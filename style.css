@@ -14,6 +14,10 @@
     font-family: 'ButlerRegular';
     src: url(fonts/Butler_Regular.otf) format(opentype);
 }
+@font-face {
+    font-family: 'ButlerBold';
+    src: url(fonts/Butler_Bold.otf) format(openType);
+}
 
 :root {
     --dark:#252526;
@@ -58,17 +62,6 @@ body {
 #header h3{
     font-size: 150%;
 }
-/* h1 {
-    background-color: var(--dark);
-    color: var(--light);
-    text-align: center;
-    font-family: 'LemonMilkItalicBold';
-    font-size: 500%;
-    width: 100%;
-    margin: 0px;
-    padding: 10px;
-    grid-area: title;
-} */
 
 #drink-select p {
     font-family: 'ButlerLight';
@@ -95,6 +88,10 @@ body {
     margin-bottom: 5px;
 }
 
+#drink-select label{
+    font-size: 150%;
+    font-family: 'ButlerBold';
+}
 /* .smaller{
     height: 30%;
     width: auto;
