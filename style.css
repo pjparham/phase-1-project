@@ -51,7 +51,6 @@ body {
     font-family: 'LemonMilkItalicBold';
     width: 100%;
     margin: 0px;
-    /* padding: 10px; */
     grid-area: title;
 }
 
@@ -92,22 +91,23 @@ body {
     font-size: 150%;
     font-family: 'ButlerBold';
 }
-/* .smaller{
-    height: 30%;
-    width: auto;
-} */
-/* #liquor-selector label{
-    font-family: 'LemonMilkItalic';
 
-} */
+#liquor-selector{
+    font-size: 125%;
+    padding: 20px;
+}
 
 #drinkDisplay{
-    /* grid-area: drink-content; */
     margin: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     gap: 10px;
+}
+
+#drinkDisplay img{
+    width: 70%;
+    border-radius: 8%;
 }
 
 #recipeDisplay{
@@ -133,19 +133,6 @@ body {
     font-size: 175%;
     margin-left: 10px;
 }
-
-
-#liquor-selector{
-    font-size: 125%;
-    padding: 20px;
-}
-
-#drinkDisplay img{
-    width: 70%;
-    border-radius: 8%;
-}
-
-
 
 input[type=submit] {
     margin-top: 10px;
