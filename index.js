@@ -1,17 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    //functions go here
-    // displayDrinks()
     enableLiquorForm()
 })
 
-function displayDrinks(){
-    fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=red_wine')
-    .then((response) => response.json())
-    .then((drinkData) => console.log(drinkData))
-}
-
+//global variables
 let header = document.getElementById('header')
-console.log(header)
 let drinkForm = document.getElementById('drink-select')
 let liquorForm = document.getElementById('liquor-selector')
 let liquorSelect = document.getElementById('liquor')
@@ -34,7 +26,7 @@ function enableLiquorForm(){
         header.appendChild(h3)
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${liquorValue}`)
         .then((response) => response.json())
-        .then((drinkData) => handleDrinkData(drinkData))
+        .then((drinkData) => createDrinkCards(drinkData))
     })
 }
 
@@ -67,13 +59,12 @@ function displayLiquorImage(liquorValue){
     }
 }
 
-function handleDrinkData(drinkData){
+function createDrinkCards(drinkData){
     for(let i = 0; i < 9; i++){
         //drinkData.drinks[i].whatever is how we access properties with this api
         let div = document.createElement('div')
         let img = document.createElement('img')
         let name = document.createElement('h3')
-        // let picAddress = drinkData.drinks[i].st
         img.src = drinkData.drinks[i].strDrinkThumb
         name.innerText = drinkData.drinks[i].strDrink
         div.setAttribute("id", `${drinkData.drinks[i].idDrink}`)
@@ -95,9 +86,6 @@ function displayRecipe(drinkData){
     let name = drink.strDrink
     let instructions = drink.strInstructions
     let ingredientsArray = []
-    // for (let i = 0; i < 15; i++){
-    //     if (drink.strIngredient[])
-    // }
     if(drink.strIngredient1 !== null){
         ingredientsArray.push(drink.strIngredient1)
     }
@@ -141,16 +129,5 @@ function displayRecipe(drinkData){
         li.innerText = ingredientsArray[x]
         ul.appendChild(li)
     }
-    recipeDisplay.appendChild(drinkName)
-    recipeDisplay.appendChild(ul)
-    recipeDisplay.appendChild(recipe)
-
-
-    // console.log(drink)
-    // console.log(instructions)
-    // console.log(ingredientsArray)
+    recipeDisplay.append(drinkName, ul, recipe)
 }
-// function fetchDrinkDetails(drinkID){
-//     fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkID}`)
-//     .then(e => e.json())
-//     .then (e => getIngredients(e))
